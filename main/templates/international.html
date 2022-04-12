@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col">
+    <div class="card shadow-sm">
+    {% for title, description, image, url, in infos%}
+    <img src="{{ image }}" alt="{{image}}">
+      <div class="card-body">
+        <a href="{{url}}"><h4 class="card-text">{{title}}</h4></a>
+        <p class="card-text">{{description}}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">Publié il y'a {{image.add_time|timesince}}</small>
+        </div>
+      </div>
+    </div>
+    {% endfor%}
+  </div>
+
+  {% endblock %}

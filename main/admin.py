@@ -1,0 +1,17 @@
+from csv import list_dialects
+from django.contrib import admin
+from.models import Category,News,Comment
+
+# Register your models here.
+
+admin.site.register(Category)
+
+class AdminNews(admin.ModelAdmin):
+    list_display =('title','category_create','add_time')
+
+admin.site.register(News,AdminNews)
+
+class AdminComment(admin.ModelAdmin):
+    list_display =('news','email','comment','status')
+
+admin.site.register(Comment,AdminComment)

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Home Page{% endblock %}</title>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bs4/bootstrap.min.css' %}" />
+	<!-- Main Jquery -->
+	<script type="text/javascript" src="{% static 'vendor/jquery.min.js' %}"></script>
+	<!-- Bootstrap Js -->
+	<script type="text/javascript" src="{% static '/vendor/bs4/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<!-- entête  -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<img src="/media/images/logo.jpg" class="rounded float-start" alt="" style="width: 100px; height: 100px;" srcset="">
+			</div>
+			
+			<div class="col align-end">
+				<img src="/media/images/bannier.png" class="img-fluid" style="height: 120px;" alt="...">
+			</div>
+		  </div>
+	  </div>
+	<!-- Top News -->
+	<nav class="navbar navbar-expand-lg  navbar-dark bg-info">
+		<div class="container">
+		  <a class="navbar-brand" href="/">INFOSTOTALGABON</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse  id="navbarNav">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="/">Accueil</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'all-news' %}">Toutes les infos</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'categories' %}">Categories</a>
+		      </li>
+			  <li class="nav-item">
+		        <a class="nav-link" href="{% url 'international' %}">International</a>
+		      </li>
+		    </ul>
+		  </div>
+	  	</div>
+    </nav>
+	
+    
+    {% block content %}
+    {% endblock %}
+
+<hr/>
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Fast News is example of <a href="https://projectsplaza.com/">Django Projects</a>, but please download and customize it for yourself!</p>
+  </div>
+</footer>
+</body>
+</html>

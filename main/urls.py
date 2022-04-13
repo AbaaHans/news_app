@@ -10,5 +10,5 @@ urlpatterns = [
     path('detail/<int:id>', views.Detail, name='detail'),
     path('categories', views.All_category, name='categories'),
     path('category-infos/<int:id>', views.Categorie_infos, name='category-infos'),
-    path('international/', views.International,name='international')
+    # path('international/', views.International,name='international')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

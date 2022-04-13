@@ -57,20 +57,20 @@ def Categorie_infos(request,id):
     {'cat_info':articles,
     'category':category_create})
 
-def International(request):
-    api  = request.GET.get('https://api.mediastack.com/v1')
-    res= api.json()
-    data= res['data']
-    title=[]
-    description=[]
-    image=[]
-    url=[]
-    for i in data:
-        title.append(i['title'])
-        description.append(i['description'])
-        image.append(i['image'])
-        url.append(i['url'])
-    infos= zip(title,description,image,url)
-    # infos = [(t1,d1,i1,u1), (t2,d2,i2,u2)]
-    return render(request, 'index.html',{'infos':infos}) 
+# def International(request):
+#     api  = request.GET.get('https://api.mediastack.com/v1')
+#     res= api.json()
+#     data= res['data']
+#     title=[]
+#     description=[]
+#     image=[]
+#     url=[]
+#     for i in data:
+#         title.append(i['title'])
+#         description.append(i['description'])
+#         image.append(i['image'])
+#         url.append(i['url'])
+#     infos= zip(title,description,image,url)
+#     # infos = [(t1,d1,i1,u1), (t2,d2,i2,u2)]
+#     return render(request, 'index.html',{'infos':infos}) 
 

@@ -8,7 +8,7 @@ from .models import News, Category, Comment
 def home(request):
     premiere_news= News.objects.first()
     troisieme_news=News.objects.all()[0:3]
-    three_category=Category.objects.all()[0:3]
+    three_category=Category.objects.all()
 
     return render(request, 'index.html',
     {'premiere_news':premiere_news,
@@ -58,5 +58,5 @@ def Categorie_infos(request,id):
     'category':category_create})
 
 
-def page_404(request, exception):
-    return render(request, 'page-404.html', status = 404)
+def Contact(request):
+    return render(request, 'contact.html')

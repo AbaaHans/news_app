@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="contact">
+    <div class="content">
+        <h2 class="text-center ">Contact-nous</h2>
+        <p> </p>
+    </div>
+    <div class="container1">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h2>Adresse</h2>
+                    <p>162 rue El Bakri place de la victoir,<br />Casablanca, Maroc,<br />200s00</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h2>Phone</h2>
+                    <p>0691897274</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="text">
+                    <h2>Email</h2>
+                    <p>digitalakeng@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form action="">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required />
+                    <span>Nom</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="" required />
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" name="" required />
+                    <span>Telephone</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required"></textarea>
+                    <span>Type your Message...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Send" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

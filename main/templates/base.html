@@ -6,6 +6,8 @@
 	<link rel="icon" href="/media/images/logo.jpg">
 	<!-- Bootstrap 4 CSS -->
 	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bs4/bootstrap.min.css' %}" />
+	<!-- css -->
+	<link rel="stylesheet" href="{% static 'vendor/css/styles.css'%}">
 	<!-- Main Jquery -->
 	<script type="text/javascript" src="{% static 'vendor/jquery.min.js' %}"></script>
 	<!-- Bootstrap Js -->
@@ -44,7 +46,7 @@
 		        <a class="nav-link" href="{% url 'categories' %}">categories</a>
 		      </li>
 			  <li class="nav-item">
-		        <!-- <a class="nav-link" href="">International</a> -->
+		        <a class="nav-link" href="{% url 'Contact' %}">Contact</a>
 		      </li>
 		    </ul>
 		  </div>

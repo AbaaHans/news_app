@@ -7,7 +7,7 @@ from .models import News, Category, Comment
 # Create your views here.
 def home(request):
     premiere_news= News.objects.first()
-    troisieme_news=News.objects.all()[1:4]
+    troisieme_news=News.objects.all()[0:3]
     three_category=Category.objects.all()[0:3]
 
     return render(request, 'index.html',
@@ -34,7 +34,7 @@ def Detail(request,id):
         messages.success(request, 'Votre commentaire a bien été soumis.')
     category_create=news.category_create.id
     rel_art = News.objects.filter(category_create=category_create)
-    comments=Comment.objects.filter(news=news,status=True).order_by('-id')
+    comments=Comment.objects.filter(news=news,status=False).order_by('-id')
     return render(request, 'detail.html',
     {'articles':news,
     'art':rel_art,
@@ -57,20 +57,6 @@ def Categorie_infos(request,id):
     {'cat_info':articles,
     'category':category_create})
 
-# def International(request):
-#     api  = request.GET.get('https://api.mediastack.com/v1')
-#     res= api.json()
-#     data= res['data']
-#     title=[]
-#     description=[]
-#     image=[]
-#     url=[]
-#     for i in data:
-#         title.append(i['title'])
-#         description.append(i['description'])
-#         image.append(i['image'])
-#         url.append(i['url'])
-#     infos= zip(title,description,image,url)
-#     # infos = [(t1,d1,i1,u1), (t2,d2,i2,u2)]
-#     return render(request, 'index.html',{'infos':infos}) 
 
+def page_404(request, exception):
+    return render(request, 'page-404.html', status = 404)

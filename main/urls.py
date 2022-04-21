@@ -1,3 +1,4 @@
+from logging import Handler
 from django import views
 from django.urls import path
 from .import views
@@ -12,3 +13,5 @@ urlpatterns = [
     path('category-infos/<int:id>', views.Categorie_infos, name='category-infos'),
     # path('international/', views.International,name='international')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

@@ -27,7 +27,7 @@
 					{% for message in messages %}
 					<p class="text-success">{{message}}</p>
 					{% endfor %}
-					<form method="post" action="detail/{{news.id}}">
+					<form method="post" action="">
 						{% csrf_token %}
 						<div class="form-group row">
 							<label class="col-md-2">Nom <span class="text-danger">*</span></label>

@@ -3,13 +3,15 @@
 <html>
 <head>
 	<title>{% block title %}Home Page{% endblock %}</title>
+	<link rel="icon" href="/media/images/logo.jpg">
 	<!-- Bootstrap 4 CSS -->
 	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bs4/bootstrap.min.css' %}" />
 	<!-- Main Jquery -->
 	<script type="text/javascript" src="{% static 'vendor/jquery.min.js' %}"></script>
 	<!-- Bootstrap Js -->
 	<script type="text/javascript" src="{% static '/vendor/bs4/bootstrap.min.js' %}"></script>
-</head>
+	<!-- font-awesone -->
+	<script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
 <body>
 	<!-- entête  -->
 	<div class="container-fluid">
@@ -30,19 +32,19 @@
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
-		  <div class="collapse navbar-collapse"  id="navbarNav">
-		    <ul class="navbar-nav ml-auto">
+		  <div class="collapse navbar-collapse justify-content-center"  id="navbarNav">
+		    <ul class="navbar-nav text-uppercase  fw-bold ">
 		      <li class="nav-item active">
-		        <a class="nav-link" href="/">Accueil</a>
+		        <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Accueil</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="{% url 'all-news' %}">Toutes les infos</a>
+		        <a class="nav-link" href="{% url 'all-news' %}">Nos actualités</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="{% url 'categories' %}">Categories</a>
+		        <a class="nav-link" href="{% url 'categories' %}">categories</a>
 		      </li>
 			  <li class="nav-item">
-		        <a class="nav-link" href="">International</a>
+		        <!-- <a class="nav-link" href="">International</a> -->
 		      </li>
 		    </ul>
 		  </div>
@@ -57,10 +59,15 @@
 <footer class="text-muted">
   <div class="container">
     <p class="float-right">
-      <a href="#">Back to top</a>
+      <a href="/">Back to top</a>
     </p>
-    <p>Fast News is example of <a href="https://projectsplaza.com/">Django Projects</a>, but please download and customize it for yourself!</p>
+	<p>
+		Suivez-nous <a href="https://web.facebook.com/Infos-Total-Gabon-105058551724838" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+	</p>
+    <p>Infos Total Gabon | Société de médias/d’actualités</p>
   </div>
 </footer>
+
+
 </body>
 </html>

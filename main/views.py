@@ -1,5 +1,7 @@
 
+import django
 from django.shortcuts import render
+from django.core.mail import send_mail
 from django.contrib import messages
 from .models import News, Category, Comment
 
@@ -59,4 +61,23 @@ def Categorie_infos(request,id):
 
 
 def Contact(request):
-    return render(request, 'contact.html')
+    # if request.method == 'POST':
+    #     fname= request.POST['fullname']
+    #     phone= request.POST['phone'],
+    #     email= request.POST['email'],
+    #     subject= request.POST['subject'],
+    #     message=request.POST['message'],
+    #     data ={
+    #         'fname':fname,
+    #         'phone': phone,
+    #         'email':email,
+    #         'subject':subject,
+    #         'message':message
+    #     }
+    #     message = '''
+    #     New message: {}
+
+    #     From: {}
+    #     '''.format(data['message'], data['email'])
+    #     send_mail(data['subject'], message, '', ['brownshans@gmail.com'])
+    return render(request, 'contact.html',{})

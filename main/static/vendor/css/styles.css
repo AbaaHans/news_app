@@ -1,4 +1,6 @@
-
+html {
+   scroll-behavior: smooth;
+ }
    
 /* *{
     margin: 0;
@@ -151,3 +153,22 @@ body *, body *:before, body *:after {
         width: 100%;
       }
     }
+
+.fa-solid {
+      position: fixed;
+      top: 42%;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      display: block;
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      z-index: 1000;
+}
+.fa-solid.top {
+   top: calc(50% - 80px);
+   background:linear-gradient(#954d9e,#df3c96);
+ }

@@ -19,7 +19,10 @@
 			  	In <a href="/category-infos/{{articles.category_create.id}}">{{articles.category_create.title}}</a>
 			  </div>
 			</div>
-
+			<!-- bannier -->
+			<div class="card">
+				<img src="/media/images/BannerCenter.png" alt="" srcset="">
+			</div>
 			<!-- Comments -->
 			<div class="card my-4">
 				<h6 class="card-header">Ajouter un Commentaire</h6>
@@ -67,20 +70,31 @@
 			</div>
 		</div>
 		<!-- Article en relation -->
-		<div class="col-md-4">
-			<h3 class="mb-3 border-bottom pb-1">Pour cette catégorie</h3>
+		<div class="col-md-2">
+			<h6 class="mb-2 border-bottom pb-1">Pour cette catégorie</h6>
 			<!-- Category Box -->
 			{% for rel_art  in art  %}
 			<div class="card mb-3 shadow">
                 <img src="/media/{{rel_art.image}}" class="card-img-top"  alt="{{rel_art.title}}">
 			  <div class="card-body">
-			    <h5 class="card-title">{{rel_art.title}}</h5>
+			    <h6 class="card-title">{{rel_art.title}}</h6>
 			    <hr/>
 			    <p class="card-text"><a href="/detail/{{rel_art.id}}" class="btn btn-sm btn-primary">Lire plus</a></p>
+
 			  </div>
 			</div>
 			{% endfor %}
+			
 		</div>
+		<div class="col-md-2">
+			<h6 class="mb-2 border-bottom pb-1">Pub</h6>
+			<!-- Pub banner right-->
+			<div class="card mb-3 shadow">
+                <img src="/media/images/BannerRight.png" class="card-img-right">
+			  </div>
+			</div>
+		</div>
+		
 	</div>
 </main>
 {% endblock %}

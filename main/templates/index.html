@@ -4,7 +4,7 @@
 	<!-- featured news -->
 	<div class="row my-3">
 		<!-- Left -->
-		<div class="col-md-7">
+		<div class="col-md-6">
 			<div class="card mb-3">
 			  <img src="media/{{premiere_news.image}}" class="card-img-top" alt="{{premiere_news.title}}">
 			  <div class="card-body">
@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<!-- Right -->
-		<div class="col-md-5" style="max-height: 450px; overflow: auto;">
+		<div class="col-md-3" style="max-height: 450px; overflow: auto;">
 			{% for news in troisieme_news %}
 			<!-- News Box -->
 			<div class="card">
@@ -40,6 +40,17 @@
 			<hr/>
 			{% endfor%}
 		</div>
+		<div class="col-md-3">
+			<h6 class="mb-2 border-bottom pb-1">Pub</h6>
+			<!-- Pub banner right-->
+			<div class="card mb-3 shadow">
+				<a href="#"><img src="/media/images/BannerRight.png" class="card-img-top"></a>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="">
+		<a href="#"><img src="/media/images/BannerCenter.png" alt="" style="width: 800px;"></a>
 	</div>
 	<!-- Category Wise News -->
 	{% for category in three_category %}

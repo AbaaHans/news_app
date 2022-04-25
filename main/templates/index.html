@@ -30,7 +30,7 @@
 			    </div>
 			    <div class="col-md-8">
 			      <div class="card-body">
-			        <h5 class="card-title">{{news.title}}</h5>
+			        <h6 class="card-title">{{news.title}}</h6>
 			        <p class="card-text"><a href="/detail/{{news.id}}" class="btn btn-sm btn-primary">Lire plus</a></p>
 			      </div>
 			    </div>
@@ -55,7 +55,7 @@
 	<!-- Category Wise News -->
 	{% for category in three_category %}
 	<h3 class="border-bottom pb-1">{{category.title}}<a href="category-infos/{{category.id}}" class="float-right btn btn-sm btn-dark">Dans cette catégorie</a></h3>
-	<div class="row my-4">
+	<div class="row my-3">
 		{% for news in category.news_set.all %}
 		{% if forloop.counter < 5 %}
 			<!-- News box -->

@@ -9,7 +9,7 @@ from .models import News, Category, Comment
 # Create your views here.
 def home(request):
     premiere_news= News.objects.first()
-    troisieme_news=News.objects.all()[0:3]
+    troisieme_news=News.objects.all()[0:2]
     three_category=Category.objects.all()
 
     return render(request, 'index.html',
